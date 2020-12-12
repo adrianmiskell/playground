@@ -1,0 +1,39 @@
+<ul *ngFor="let author of authors">
+  <li>{{ author.id }} {{ author.name }}</li>
+</ul>
+<button
+  class="btn btn-primary"
+  [class.warn]="isActive"
+  [style.backgroundColor]="isActive ? 'blue' : 'violet'"
+  (click)="onSave($event)"
+>
+  SAVE
+</button>
+one way binding example :<input [value]="email" (keyup.enter)="onKeyUp()" />
+ngModel example<input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
+
+<hr />
+<h2>Pipes</h2>
+<ul>
+  <li>{{ course.title }}</li>
+  <li>{{ course.rating }}</li>
+  <li>{{ course.students }}</li>
+  <li>{{ course.price }}</li>
+  <li>{{ course.releaseDate }}</li>
+  <li>{{ course.desc }}</li>
+</ul>
+<ul>
+  <li>{{ course.title | uppercase | lowercase | titlecase }}</li>
+  <li>{{ course.title | uppercase }}</li>
+  <li>{{ course.rating | number: "1.2-2" }}</li>
+  <li>{{ course.students | number }}</li>
+  <li>{{ course.price | currency: "EUR":true:"3.2-2" }}</li>
+  <li>{{ course.releaseDate | date: "shortDate" }}</li>
+  <li>{{ course.desc | summary: 100 }}</li>
+</ul>
+
+<h2>assignment - using pipes</h2>
+<input [(ngModel)]="movie" />
+{{ movie | titlecase }}
+<span [class.fas]="isFavorite" [class.far]="!isFavorite" class="fa-star"></span>
+<i class="far fa-star"></i>
