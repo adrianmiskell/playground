@@ -35,5 +35,11 @@ ngModel example<input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
 <h2>assignment - using pipes</h2>
 <input [(ngModel)]="movie" />
 {{ movie | titlecase }}
+<h2>Font Awesome class property</h2>
+<span
+  [class.fas]="isFavorite"
+  [class.far]="!isFavorite"
+  class="fas-star"
+></span>
 <span [class.fas]="isFavorite" [class.far]="!isFavorite" class="fa-star"></span>
-<i class="far fa-star"></i>
+test <i class="fas fa-star"></i> <i class="far fa-star"></i>test2
