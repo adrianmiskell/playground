@@ -11,7 +11,7 @@ import { Author, AuthorsService } from './authors.service';
 export class AuthorsComponent implements OnInit {
   authors: Author[];
   isActive = true;
-  isFavorite = true;
+  isSelected = true;
   email = 'adrian@gmail.com';
   movie = '';
   course = Course.courses;
@@ -23,5 +23,6 @@ export class AuthorsComponent implements OnInit {
   }
   onSave($event) { console.log('button clicked'); }
   onKeyUp() { console.log('enter presed ' + this.email); }
+  onFavoriteChanged(isFav): void { console.log('fav changed' + isFav); }
 
 }

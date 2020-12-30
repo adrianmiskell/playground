@@ -1,0 +1,22 @@
+<h1>NG Container and ngFor example</h1>
+<ng-content></ng-content>
+<p>tasks array size {{ tasks.length }}</p>
+
+<ng-container *ngIf="tasks?.length > 0; else noTasks">
+  <div
+    *ngFor="
+      let task of tasks;
+      index as i;
+      count as c;
+      even as e;
+      trackBy: trackById
+    "
+  >
+    count:{{ c }} index :{{ i }} {{ task.id }} - {{ task.description }}
+    <strong> {{ e ? "even" : "odd" }}</strong>
+  </div>
+</ng-container>
+
+<ng-template #noTasks>
+  <div>No tasks found.</div>
+</ng-template>

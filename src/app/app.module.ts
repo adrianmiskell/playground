@@ -9,12 +9,20 @@ import { AppComponent } from './app.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { AuthorsService } from './authors/authors.service';
 import { SummaryPipe } from './shared/summary.pipe';
+import { FavoriteComponent } from './favorite/favorite.component';
+import { ContainerExampleComponent } from './container-example/container-example.component';
+import { SwitchExampleComponent } from './switch-example/switch-example.component';
+import { ZippyAssignmentComponent } from './zippy-assignment/zippy-assignment.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthorsComponent,
-    SummaryPipe
+    SummaryPipe,
+    FavoriteComponent,
+    ContainerExampleComponent,
+    SwitchExampleComponent,
+    ZippyAssignmentComponent
   ],
   imports: [
     BrowserModule,

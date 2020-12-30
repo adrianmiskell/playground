@@ -1,0 +1,10 @@
+<h2>switch example</h2>
+<ul>
+  <li><a (click)="viewMode = 'map'">map</a></li>
+  <li><a (click)="viewMode = 'list'">list</a></li>
+</ul>
+<ng-container [ngSwitch]="viewMode">
+  <div *ngSwitchCase="'map'">map selected</div>
+  <div *ngSwitchCase="'list'">list selected</div>
+  <div *ngSwitchDefault>Otherwise</div>
+</ng-container>
