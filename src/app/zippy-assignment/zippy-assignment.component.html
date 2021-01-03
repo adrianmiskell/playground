@@ -1,1 +1,15 @@
-<p>zippy-assignment works!</p>
+<div class="zippy">
+  <div class="heading" (click)="toggle()">
+    {{ title }}
+    <span
+      [ngClass]="{
+        'fa fa-chevron-down': !selected,
+        'fas fa-chevron-up': selected
+      }"
+    ></span>
+  </div>
+  <div class="body" *ngIf="selected">
+    <ng-content></ng-content>
+  </div>
+</div>
+<br />
